@@ -1,7 +1,6 @@
 package com.hzmahmed.cloud_project
 
 import android.content.ContentValues.TAG
-import android.nfc.Tag
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
