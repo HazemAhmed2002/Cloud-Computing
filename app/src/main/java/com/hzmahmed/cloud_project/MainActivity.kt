@@ -4,6 +4,7 @@ import android.content.ContentValues.TAG
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.Toast
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import com.hzmahmed.cloud_project.databinding.ActivityMainBinding
@@ -31,9 +32,9 @@ class MainActivity : AppCompatActivity() {
             db.collection("persons")
                 .add(person)
                 .addOnSuccessListener { documentReference ->
-                    Log.d(TAG, "DocumentSnapshot added with ID: ${documentReference.id}")
+                    Toast.makeText(this, "Success", Toast.LENGTH_SHORT).show()
                 }.addOnFailureListener { e ->
-                    Log.w(TAG, "Error adding document", e)
+                    Toast.makeText(this, "Fail", Toast.LENGTH_SHORT).show()
                 }
 
             }
